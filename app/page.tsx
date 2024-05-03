@@ -40,7 +40,7 @@ function Client() {
         <button
           onClick={async () => {
             setIsDownloading(true);
-            let templink = await getVideoDownload(url);
+            let templink: any = await getVideoDownload(url);
             setDownloadLink(templink);
           }}
         >
