@@ -1,13 +1,20 @@
 "use server";
 
-import puppeteer from "puppeteer";
+import puppeteer from "puppeteer-core";
+import chromium from "@sparticuz/chromium";
 
 async function getVideoDownload(url: string) {
   const website = "https://sssinstagram.com/video-downloader";
   //Server action, download video
 
   console.log("Starting...");
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({
+    args: chromium.args,
+    defaultViewport: chromium.defaultViewport,
+    executablePath: await chromium.executablePath(),
+    headless: chromium.headless,
+    ignoreHTTPSErrors: true,
+  });
   const page = await browser.newPage();
 
   await page.goto(website);
