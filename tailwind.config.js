@@ -1,5 +1,3 @@
-
-
 const config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",

@@ -1,0 +1,108 @@
+/* 
+In this project we have the following colors:
+
+Grey: #3d3d3d
+White: #fffff2
+Yellow: #F7C02D
+*/
+.footer {
+  position: absolute;
+  bottom: 0;
+  color: #f7c02d;
+
+  font-weight: 800;
+  font-size: 1.15em;
+
+  padding: 1%;
+  animation: increasePadding 2s infinite;
+}
+.header {
+  position: absolute;
+  top: 0;
+
+  color: #3d3d3d;
+  opacity: 0.6;
+
+  padding: 2%;
+
+  font-weight: 500;
+  font-size: 0.7em;
+  letter-spacing: 0.085em;
+}
+
+@keyframes increasePadding {
+  0% {
+    padding: 1%;
+  }
+  50% {
+    padding: 4%;
+  }
+  100% {
+    padding: 1%;
+  }
+}
+
+.main {
+  background-color: #fffff2;
+
+  height: 90vh;
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.urlInput {
+  width: 85%;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.urlInput input {
+  flex: 0.6;
+  padding: 1.5% 2% 1.5% 2%;
+
+  border: 3px solid #3d3d3d;
+  border-radius: 15px;
+
+  background-color: #fffff2;
+  margin-right: 4%;
+}
+.urlInput input::placeholder {
+  color: #3d3d3d;
+  opacity: 0.6;
+  font-size: 1.15em;
+  font-weight: 450;
+}
+
+.urlInput button {
+  flex: 0.4;
+  background-color: #f7c02d;
+  border: 3px solid #3d3d3d;
+
+  border-radius: 15px;
+}
+.urlInput button h3 {
+  font-weight: 600;
+  font-size: 1.1em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.titleBox {
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+}
+.titleBox h1 {
+  font-size: 2.3em;
+}
+.titleBox p {
+  margin-top: -4%;
+  padding-bottom: 8%;
+  font-size: 0.9em;
+}
